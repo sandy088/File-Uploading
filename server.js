@@ -1,8 +1,12 @@
 //app create
 const express= require('express')
 const app = express()
+const cors = require('cors');
 
 require('dotenv').config()
+
+// Allow all origins to access the server's resources
+app.use(cors());
 
 //port
 const PORT= process.env.PORT
